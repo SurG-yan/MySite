@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 994px;
+  margin: 0 auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: Fontspring;
+  src: url(../Demo_Fonts/Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "nav head head" "nav sec  sec" "nav foot foot";
+}
+
+#Nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  border-right: 2px solid rgba(198, 198, 198, 0.24);
+  max-width: 270px;
+  padding-bottom: 20px;
+  position: relative;
+}
+#Nav .nav-more {
+  position: absolute;
+  bottom: 10px;
+  display: block;
+  width: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#Nav .logo {
+  font-family: Fontspring;
+  display: block;
+  font-size: 34px;
+  padding: 30px;
+}
+#Nav ul {
+  display: block;
+  font-size: 16px;
+  padding: 0 10px;
+}
+#Nav ul li a {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#Nav ul li a img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+#Nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#Nav ul i {
+  font-size: 28px;
+  color: white;
+}
+#Nav img {
+  width: 103px;
+  height: 29px;
+}
+
+#profileHeader {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: head;
+  padding-top: 40px;
+}
+#profileHeader .profilFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+#profileHeader .profilFlex .name {
+  color: white;
+  padding-top: 20px;
+}
+#profileHeader .profilFlex .name li {
+  font-size: 18px;
+}
+#profileHeader .profilFlex .name li span {
+  font-size: 12px;
+}
+#profileHeader .profilFlex .profil-follow {
+  gap: 40px;
+  padding-top: 20px;
+}
+#profileHeader .profilFlex .profil-follow li {
+  color: white;
+}
+#profileHeader .profilFlex .profil-follow li span {
+  font-size: 17px;
+  font-weight: 700;
+}
+#profileHeader .profilFlex .profil-name {
+  gap: 10px;
+}
+#profileHeader .profilFlex .profil-name,
+#profileHeader .profilFlex .profil-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#profileHeader .profilFlex .profil-name .name,
+#profileHeader .profilFlex .profil-follow .name {
+  line-height: 25px;
+  font-size: 20px;
+  padding-right: 20px;
+}
+#profileHeader .profilFlex .profil-name .btn,
+#profileHeader .profilFlex .profil-follow .btn {
+  font-size: 14px;
+  padding: 5px 30px;
+  background-color: rgba(198, 198, 198, 0.24);
+  border-radius: 7px;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#profileHeader .profilFlex .profil-name .btn:hover,
+#profileHeader .profilFlex .profil-follow .btn:hover {
+  background-color: rgba(198, 198, 198, 0.077);
+}
+#profileHeader .profilFlex .profil-name .fz,
+#profileHeader .profilFlex .profil-follow .fz {
+  font-size: 28px;
+  font-weight: 800;
+  padding-left: 20px;
+}
+#profileHeader .profilPhoto {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#profileHeader .history-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  padding-top: 120px;
+}
+#profileHeader .history-card .card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#profileHeader .history-card .box {
+  background-color: rgba(198, 198, 198, 0.24);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 50%;
+}
+#profileHeader .history-card .box a {
+  border-radius: 50%;
+  border: 2px solid rgba(198, 198, 198, 0.43);
+  width: 87px;
+  height: 87px;
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#profileHeader .history-card .box a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+#profileSec {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: sec;
+}
+#profileSec .menu-posts {
+  border-top: 2px solid rgba(198, 198, 198, 0.43);
+  margin-top: 100px;
+}
+#profileSec .menu-posts ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  font-size: 17px;
+}
+#profileSec .menu-posts ul a {
+  display: block;
+  border-top: 3px solid transparent;
+  margin-top: -2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#profileSec .menu-posts ul a:hover {
+  border-top: 3px solid white;
+}
+#profileSec .menu-posts ul i {
+  font-size: 20px;
+  letter-spacing: 15px;
+}
+
+.post-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 40px;
+  gap: 10px;
+}
+.post-card .box {
+  width: calc(33% - 20px);
+  position: relative;
+}
+.post-card .box:hover .hover {
+  visibility: visible;
+  opacity: 1;
+}
+.post-card .box .hover {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.468);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.post-card .box img {
+  width: 303px;
+  height: 303px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: foot;
+  padding: 100px 0;
+}
+#footer .footFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#footer .footFlex .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+#footer .footFlex .footer a {
+  color: rgb(132, 132, 132);
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#footer .footFlex .footer a:hover {
+  border-bottom: 1px solid white;
+}
+#footer .copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+#footer .copy #select {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgb(132, 132, 132);
+  font-size: 20px;
+}
+#footer .copy #select option {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.468);
+}
+#footer .copy li {
+  color: rgb(108, 108, 108);
+}
